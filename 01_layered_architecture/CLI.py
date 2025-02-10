@@ -27,17 +27,23 @@ def main():
 
         elif choice == "3":
             manager.print_tasks()
+            print("Press 0 to quit")
             index = int(input("Enter task number to complete: "))-1
             if manager.complete_task(index):
                 print("Task marked as complete.")
+            elif index == 0:
+                pass
             else:
                 print("Invalid task number.")
 
         elif choice == "4":
             manager.print_tasks()
+            print("Press 0 to quit")
             index = int(input("Enter task number to delete: "))-1
             if manager.delete_task(index):
                 print("Task deleted.")
+            elif index == 0:
+                pass
             else:
                 print("Invalid task number.")
 

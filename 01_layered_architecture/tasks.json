@@ -6,5 +6,9 @@
     {
         "title": "second task",
         "completed": false
+    },
+    {
+        "title": "some task",
+        "completed": false
     }
 ]
