@@ -2,26 +2,37 @@
 import random
 
 
-nums = []
+def gen_nums():
+    nums = []
+    print("generateing numbers 1 to 100...")
+    for i in range(100):
+        nums.append(random.randint(1, 100))
+    return nums
 
-print("generateing numbers 1 to 100...")
-# generates numbers 1 to 100
-for i in range(100):
-    nums.append(random.randint(1, 100))
+def even_filter(nums):
+    print("filtering even numbers...")
+    return [num for num in nums if num % 2 == 0]
 
-print("filtering even numbers...")
-# filters even numbers
-for i in nums:
-    if i//2 != 0:
-        nums.remove(i)
 
-squared_nums = []
-# square the even numbers
-print("square the even numbers...")
-for i in nums:
-    squared_nums.append(i**2)
+def square(nums):
+    squared_nums = []
+    print("square the even numbers...")
+    for i in nums:
+        squared_nums.append(i**2)
+    return squared_nums
 
 # output the results
-print("output the results...")
-for i in squared_nums:
-    print(i)
+def output(squared_nums):
+    print("output the results...")
+    for i in squared_nums:
+        print(i)
+
+def main():
+    nums = gen_nums()
+    filtered = even_filter(nums)
+    squared_nums = square(filtered)
+    output(squared_nums)
+
+
+if __name__ == "__main__":
+    main()
