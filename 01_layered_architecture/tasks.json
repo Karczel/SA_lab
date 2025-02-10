@@ -1,7 +1,7 @@
 [
     {
         "title": "First task",
-        "completed": true
+        "completed": false
     },
     {
         "title": "second task",

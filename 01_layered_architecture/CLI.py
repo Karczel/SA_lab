@@ -12,8 +12,9 @@ def main():
         print("1. View tasks")
         print("2. Add task")
         print("3. Complete task")
-        print("4. Delete task")
-        print("5. Exit")
+        print("4. Uncomplete task")
+        print("5. Delete task")
+        print("6. Exit")
 
         choice = input("Choose an option: ")
 
@@ -39,6 +40,17 @@ def main():
         elif choice == "4":
             manager.print_tasks()
             print("Press 0 to quit")
+            index = int(input("Enter task number to uncomplete: "))-1
+            if manager.uncomplete_task(index):
+                print("Task marked as uncomplete.")
+            elif index == 0:
+                pass
+            else:
+                print("Invalid task number.")
+
+        elif choice == "5":
+            manager.print_tasks()
+            print("Press 0 to quit")
             index = int(input("Enter task number to delete: "))-1
             if manager.delete_task(index):
                 print("Task deleted.")
@@ -47,7 +59,7 @@ def main():
             else:
                 print("Invalid task number.")
 
-        elif choice == "5":
+        elif choice == "6":
             print("Goodbye!")
             break
 

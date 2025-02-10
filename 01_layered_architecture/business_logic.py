@@ -20,6 +20,14 @@ class TaskManager:
             return True
         return False
 
+    def uncomplete_task(self, index):
+        tasks = self.storage.get_tasks()
+        if 0 <= index < len(tasks):
+            tasks[index]["completed"] = False
+            self.storage._save_tasks()
+            return True
+        return False
+
     def delete_task(self, index):
         return self.storage.remove_task(index)
 
