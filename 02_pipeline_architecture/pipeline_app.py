@@ -25,4 +25,3 @@ for i in nums:
 print("output the results...")
 for i in squared_nums:
     print(i)
-
