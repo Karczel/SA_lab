@@ -4,6 +4,7 @@ app = Flask(__name__)
 
 products = []
 
+
 @app.route("/add_product", methods=["POST"])
 def add_product():
     data = request.get_json()
@@ -23,8 +24,9 @@ def add_product():
 def get_products():
     all_products = []
     for i in range(len(products)):
-        all_products.append({"product_id": i+1, "product_name": products[i]})
-    return jsonify({"products" : all_products}), 200
+        all_products.append({"product_id": i + 1, "product_name": products[i]})
+    return jsonify({"products": all_products}), 200
+
 
 if __name__ == "__main__":
     app.run(port=5002, debug=True)
