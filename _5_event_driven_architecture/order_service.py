@@ -19,6 +19,10 @@ class OrderService:
 
     def start(self):
         """Starts the order creation process and emits events."""
-        self.create_order("Product-0", 0)
-        self.create_order("Product-1", 10)
-        # Todo: Add products
+        self.create_order("Soap", 0)
+        self.create_order("Shampoo", 10)
+        self.create_order("Soap", 100)
+        self.create_order("Face Cleanser", 5)
+        self.create_order("Soap", 5)
+        self.create_order("Bath Bomb", 8)
+        self.create_order("Bath Bomb", 5)

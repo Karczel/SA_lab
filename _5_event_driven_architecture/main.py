@@ -24,6 +24,8 @@ def main():
 
     # Create orders
     order_service.start()
+    inventory_service.restock_all()
+    order_service.start()
 
     if sys_parallel:
         event_listening_thread.join()
