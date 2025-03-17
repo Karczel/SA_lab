@@ -1,13 +1,8 @@
-def main():
-    # OrderService
-
-    # Payment Service
-
-    # Inventory Service
-
-    # Shipping Service
-
-    pass
+from user import User
+from orchestrator import Orchestrator
 
 if __name__ == '__main__':
-    main()
+    user = User()
+    user.deposit(100000)
+    orchestrator = Orchestrator()
+    orchestrator.run(user)
