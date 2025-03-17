@@ -1,4 +1,3 @@
-# Event Subscriber
 class InventoryService:
     """Listens for events (orders) and reduce the product stock accordingly."""
 

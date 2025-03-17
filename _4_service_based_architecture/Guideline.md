@@ -14,13 +14,13 @@ For the lab session, let’s implement a  where:
 We'll use  to build RESTful APIs for each service and simulate the communication between the services.
 
 
-The  will handle user registration and login.
+The user service will handle user registration and login.
 * /register (POST) – Registers a new user.
 * /login (POST) – Authenticates a user based on credentials.
-The  will handle product-related operations like adding and viewing products.
+The product service will handle product-related operations like adding and viewing products.
 * /add_product (POST) – Adds a new product.
 * /get_products (GET) – Returns all products.
-The  will act as the main entry point that interacts with the  and .
+The gateway service will act as the main entry point that interacts with the  and .
  routes incoming requests to the appropriate service (User or Product) by making HTTP requests to the other services.
 * Handles user registration and login. 
 Runs on localhost:5001.
