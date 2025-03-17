@@ -14,8 +14,12 @@ class Orchestrator:
         self.shipping_service = ShippingService()
 
     def run(self, user):
-        self.process(100,5, user)
-        self.process(30, 9, user)
+        self.process('100',5, user)
+        self.process('30', 90, user)
+        self.process('42', 19, user)
+        self.process('13', 9, user)
+        self.process('7', 93, user)
+
 
     def process(self, product_id, quantity, user):
         # Create orders

@@ -2,7 +2,6 @@
 from event_bus import EventBus
 
 class OrderService:
-    """Singleton"""
     order_count = 0
 
     def create_order(self, name, quantity):
